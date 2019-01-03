@@ -1,0 +1,9 @@
+# development environment
+.idea
+npm-debug.log*
+
+# dependencies
+/node_modules
+
+# generated files
+/build
