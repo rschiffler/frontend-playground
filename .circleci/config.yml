@@ -7,5 +7,5 @@ jobs:
     steps:
       - checkout
       - run:
-        name: install-dependencies
-        command: 'npm install'
+        name: install-npm
+        command: npm install
