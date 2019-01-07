@@ -5,7 +5,7 @@ class LandingContainer extends React.PureComponent {
   render() {
     return (
       <div>
-        Render route links here
+        <h1>Welcome to the Front-end Playground!</h1>
       </div>
     )
   }

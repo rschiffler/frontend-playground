@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 // Components
 import Post from './post';
+import Button from '../button';
 
 // Redux
 import { GET_POSTS } from './postsActions';
@@ -19,11 +20,7 @@ class ViewPostsContainer extends React.PureComponent {
       <div>
         <form onSubmit={this.handleSubmit}>
           <h1>View Posts</h1>
-          <fieldset>
-            <p>
-              <input type='submit' value='Get posts' />
-            </p>
-          </fieldset>
+          <Button type='submit' value='Get posts' />
         </form>
         <div>
           {this.props.posts.map((post) => {

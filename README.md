@@ -10,10 +10,8 @@ The technologies used in this solution are:
 
 ## Todo
 
-1. Add in react router
-1. Add in styled components
+1. Circle ci build
 1. Unit test sagas
 1. Airbnb linting
 1. Typescript
-1. Build with circle ci
 
