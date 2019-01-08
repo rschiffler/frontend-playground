@@ -9,7 +9,7 @@ jobs:
       - setup_remote_docker
       - run:
           name: "Build with docker"
-          command: "docker build -t latest ."
+          command: "docker build -t rosepollock/playground ."
       - run:
           name: "Push docker image"
           command: "docker push rosepollock/playground:latest"
