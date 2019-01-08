@@ -2,10 +2,10 @@ version: 2
 jobs:
   build:
     working-directory: ~/playground
-    docker:
-      - image: circleci/node:10.14.2
     steps:
-      - checkout
       - run:
-          name: "Install dependencies"
-          command: "npm install"
+          name: "Build with docker"
+          command: "docker build -t latest ."
+      - run:
+          name: "Push docker image"
+          command: "docker push rosepollock/playground:latest"
