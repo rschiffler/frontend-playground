@@ -13,5 +13,5 @@ jobs:
       - deploy:
           name: "Push docker image"
           command: |
-            docker login -u $DOCKER_HUB_USER_ID -p $DOCKER_HUB_PWD
+            echo "$DOCKER_HUB_PWD" | docker login -u $DOCKER_HUB_USER_ID --password-stdin
             docker push rosepollock/playground:latest
