@@ -10,6 +10,8 @@ jobs:
       - run:
           name: "Build with docker"
           command: "docker build -t rosepollock/playground ."
-      - run:
+      - deploy:
           name: "Push docker image"
-          command: "docker push rosepollock/playground:latest"
+          command: |
+            docker login -e $DOCKER_HUB_EMAIL -u $DOCKER_HUB_USER_ID $DOCKER_HUB_PWD
+            docker push rosepollock/playground:latest
