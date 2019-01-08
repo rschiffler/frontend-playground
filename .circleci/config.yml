@@ -14,4 +14,4 @@ jobs:
           name: "Push docker image"
           command: |
             echo "$DOCKER_HUB_PWD" | docker login -u $DOCKER_HUB_USER_ID --password-stdin
-            docker push rosepollock/playground:$CIRCLE_BUILD_NUM
+            docker push rosepollock/playground:latest
