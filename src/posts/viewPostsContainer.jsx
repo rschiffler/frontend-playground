@@ -23,7 +23,9 @@ class ViewPostsContainer extends React.PureComponent {
           <Button type='submit' value='Get posts' />
         </form>
         <div>
-          {this.props.posts.map((post) => {
+          {this.props.errored && <p>Could not retrieve posts at this time. Please try again later</p>}
+          {this.props.fetching && <p>Loading data...</p>}
+          {!this.props.fetching && this.props.posts.map((post) => {
             return (
               <Post {...post} />
             )
@@ -35,7 +37,9 @@ class ViewPostsContainer extends React.PureComponent {
 }
 
 const mapStateToProps = state => ({
-  posts: state.postsState.posts || []
+  posts: state.postsState.posts || [],
+  fetching: state.postsState.fetching,
+  errored: state.postsState.errored
 });
 
 const mapDispatchToProps = dispatch => {

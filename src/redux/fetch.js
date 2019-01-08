@@ -3,11 +3,11 @@ import fetch from 'cross-fetch';
 export default async function callFetch(url) {
   try {
     const response = await fetch(url);
-    if (response.status >= 400) {
+    if (response.status !== 200) {
       throw new Error("Bad response from server");
     }
     return await response.json();
   } catch(err) {
-    console.error(err);
+    throw new Error(err);
   }
 }
