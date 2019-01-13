@@ -7,3 +7,4 @@ npm-debug.log*
 
 # generated files
 /build
+**/__snapshots__/**

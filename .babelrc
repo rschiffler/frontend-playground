@@ -6,5 +6,6 @@
         "ssr": false
       }
     ]
-  ]
+  ],
+  "presets": ["babel-preset-react-app"]
 }

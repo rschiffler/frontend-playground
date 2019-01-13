@@ -11,6 +11,6 @@ The technologies used in this solution are:
 ## Todo
 
 1. Unit test sagas
-1. Airbnb linting
-1. Typescript
+1. Add formatting and linting
+1. Add typescript
 
